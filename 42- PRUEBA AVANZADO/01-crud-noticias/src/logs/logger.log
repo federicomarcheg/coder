@@ -1,0 +1,39 @@
+[2023-02-13T22:28:12.919] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2023-02-13T22:28:14.717] [INFO] default - Conectado a MongoDB!
+[2023-02-13T22:28:40.988] [INFO] default - POST /news
+[2023-02-13T22:28:41.013] [FATAL] default - Error: News validation failed: title: this title is short
+    at ValidationError.inspect (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/mongoose/lib/error/validation.js:50:26)
+    at formatValue (node:internal/util/inspect:806:19)
+    at inspect (node:internal/util/inspect:365:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2273:40)
+    at Object.format (node:internal/util/inspect:2130:10)
+    at basicLayout (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/log4js/lib/layouts.js:65:52)
+    at app (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/log4js/lib/appenders/file.js:98:23)
+    at /media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/log4js/lib/log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/log4js/lib/log4js.js:42:21) {
+  errors: {
+    title: ValidatorError: this title is short
+        at validate (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/mongoose/lib/schematype.js:1346:13)
+        at SchemaType.doValidate (/media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/mongoose/lib/schematype.js:1330:7)
+        at /media/mauri/DATOS/CODERHOUSE/BACKEND/backend-32155-coderhouse/41-DESARROLLO DE SERVIDOR COMPLETO/02-app-fullstack/backend/node_modules/mongoose/lib/document.js:2905:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: [Object],
+      kind: 'minlength',
+      path: 'title',
+      value: 'new',
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'News validation failed'
+}
+[2023-02-13T22:29:06.428] [INFO] default - POST /news
+[2023-02-13T22:29:13.793] [INFO] default - POST /news
+[2023-02-13T22:29:17.794] [INFO] default - POST /news
+[2023-02-13T22:29:25.446] [INFO] default - GET /news/63eae3ed4a85988aa757897a
+[2023-02-13T22:29:29.402] [INFO] default - GET /news
+[2023-02-13T22:29:36.333] [INFO] default - GET /news
+[2023-02-13T22:30:08.714] [INFO] default - GET /news
+[2023-02-13T22:30:37.352] [INFO] default - 🚀 Server started on port http://localhost:8080
+[2023-02-13T22:30:39.065] [INFO] default - Conectado a MongoDB!
