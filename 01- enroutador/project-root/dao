@@ -1,0 +1,53 @@
+// src/dao/productdao.js
+
+const db = require('../config/database');
+
+class ProductDao {
+    static async getAllProducts() {
+        const query = 'SELECT * FROM products';
+        const [rows] = await db.execute(query); 
+        return rows;
+    }
+
+
+
+    static async getProductById(id) {
+        const query = 'SELECT * FROM products WHERE id = ?';
+        const [rows] = await db.execute(query,[id]);
+        return rows[0];
+    }
+
+
+
+    static async createProduct(product) {
+        const query = 'INSERT INTO products (name, price, description) values (?, ?, ?)';
+        const result = await db.execute(query, [product.name, product.price, product.description]);
+        return result[0].insertId;
+
+    }
+
+
+
+
+    static async updateProduct(product) {
+        const query = 'UPDATE products SET name = ?, price = ?, description = ? WHERE id= ?';
+        const result = await db.execute(query, [product.name, product.price,
+          product.description, product.id]);
+          return result[0].affectedRows;
+    }
+
+
+
+
+
+
+    static async deleteProduct(id) {
+        const query = 'DELETE FROM products WHERE id = ?';
+        const result = await db.execute(query, [id]);
+        return result[0].affectedRows;
+    }
+}
+
+module.exports = ProductDao;
+
+
